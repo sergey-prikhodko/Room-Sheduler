@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B51F46D723FBE740005C854F /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F46D623FBE740005C854F /* DefaultViewController.swift */; };
+		B54390B623FD58F7009AA57A /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54390B523FD58F7009AA57A /* Autolayout.swift */; };
 		B56DEFC623FADBFB004B5A48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56DEFC523FADBFB004B5A48 /* AppDelegate.swift */; };
 		B56DEFC823FADBFB004B5A48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56DEFC723FADBFB004B5A48 /* SceneDelegate.swift */; };
 		B56DEFCF23FADC01004B5A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56DEFCE23FADC01004B5A48 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		B51F46D623FBE740005C854F /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
+		B54390B523FD58F7009AA57A /* Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
 		B56DEFC223FADBFB004B5A48 /* Room Scheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Room Scheduler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56DEFC523FADBFB004B5A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B56DEFC723FADBFB004B5A48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				B51F46D623FBE740005C854F /* DefaultViewController.swift */,
+				B54390B523FD58F7009AA57A /* Autolayout.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B56DEFC623FADBFB004B5A48 /* AppDelegate.swift in Sources */,
+				B54390B623FD58F7009AA57A /* Autolayout.swift in Sources */,
 				B51F46D723FBE740005C854F /* DefaultViewController.swift in Sources */,
 				B56DEFC823FADBFB004B5A48 /* SceneDelegate.swift in Sources */,
 				B5FA82B323FD513600EC355E /* MainViewController.swift in Sources */,
