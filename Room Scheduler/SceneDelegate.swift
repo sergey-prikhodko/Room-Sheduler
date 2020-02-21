@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Core
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,7 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let navigation = UINavigationController(rootViewController: MainViewController())
+        let model = ProfileModel(user: User.empty)
+        let viewModel = ProfileViewModel(model)
+        
+        let navigation = DefaultNavigationController(rootViewController: ProfileViewController(viewModel))
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = navigation
         window.makeKeyAndVisible()
