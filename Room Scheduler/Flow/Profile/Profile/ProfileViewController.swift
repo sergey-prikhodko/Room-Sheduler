@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import Core
 import Combine
 
 final class ProfileViewController: DefaultViewController, HasCancelableBag {
@@ -18,11 +19,15 @@ final class ProfileViewController: DefaultViewController, HasCancelableBag {
     private let container = UIView()
     
     private let avatarImageView = UIImageView()
+    private let ageLabel = UILabel()
+    private let bioLabel = UILabel()
 
-    private var viewModel: ProfileViewModel
+    private var store: Store<User, Never>
     
-    init(_ viewModel: ProfileViewModel) {
-        self.viewModel = viewModel
+    private var bag = Set<AnyCancellable>()
+    
+    init(_ store: Store<User, Never>) {
+        self.store = store
 
         super.init()
 
@@ -31,7 +36,9 @@ final class ProfileViewController: DefaultViewController, HasCancelableBag {
     }
     
     private func setupBinding() {
-        viewModel.$fullName.map { Optional($0) }.assign(to: \.title, on: self).store(in: &cancelableBag)
+        store.$state.map { .some("\($0.firstName) \($0.lastName)") }.assign(to: \.title, on: self).store(in: &bag)
+        store.$state.map { .some("Age: \($0.age)") }.assign(to: \.text, on: ageLabel).store(in: &bag)
+        store.$state.map { .some($0.bio) }.assign(to: \.text, on: bioLabel).store(in: &bag)
     }
 }
 
@@ -40,12 +47,13 @@ final class ProfileViewController: DefaultViewController, HasCancelableBag {
 private extension ProfileViewController  {
     
     func setupUI() {
-        title = "Profile"
         view.backgroundColor = .systemBackground
         
         setupNavigation()
         setupScrollView()
         setupAvatarImageView()
+        setupAgeLabel()
+        setupBioLabel()
     }
     
     func setupNavigation() {
@@ -78,7 +86,6 @@ private extension ProfileViewController  {
         avatarImageView.layout {
             $0.top == container.topAnchor + 15.0
             $0.centerX == container.centerXAnchor
-            $0.bottom == container.bottomAnchor - 15.0
             $0.height == 120.0
             $0.width == 120.0
         }
@@ -87,5 +94,28 @@ private extension ProfileViewController  {
         avatarImageView.layer.borderColor = UIColor.white.cgColor
         avatarImageView.backgroundColor = .secondarySystemBackground
         avatarImageView.clipsToBounds = true
+    }
+    
+    func setupAgeLabel() {
+        container.addSubview(ageLabel)
+        ageLabel.layout {
+            $0.top == avatarImageView.bottomAnchor + 15.0
+            $0.centerX == container.centerXAnchor
+        }
+        ageLabel.font = .systemFont(ofSize: 25.0)
+        ageLabel.textColor = .label
+    }
+    
+    func setupBioLabel() {
+        container.addSubview(bioLabel)
+        bioLabel.layout {
+            $0.top == ageLabel.bottomAnchor + 15.0
+            $0.leading == container.leadingAnchor + 15.0
+            $0.trailing == container.trailingAnchor - 15.0
+            $0.bottom == container.bottomAnchor - 15.0
+        }
+        bioLabel.font = .systemFont(ofSize: 23.0)
+        bioLabel.textColor = .secondaryLabel
+        bioLabel.numberOfLines = 0
     }
 }

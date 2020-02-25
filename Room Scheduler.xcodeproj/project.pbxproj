@@ -17,8 +17,6 @@
 		B56DEFD223FADC01004B5A48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56DEFD023FADC01004B5A48 /* LaunchScreen.storyboard */; };
 		B57F1BB023FD5E04007C186C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F1BAF23FD5E04007C186C /* User.swift */; };
 		B57F1BB623FD634E007C186C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F1BB323FD634E007C186C /* ProfileViewController.swift */; };
-		B57F1BB723FD634E007C186C /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F1BB423FD634E007C186C /* ProfileModel.swift */; };
-		B57F1BB823FD634E007C186C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F1BB523FD634E007C186C /* ProfileViewModel.swift */; };
 		B57F1BBA23FD72D7007C186C /* DefaultNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F1BB923FD72D7007C186C /* DefaultNavigationController.swift */; };
 		B5891A0423FFEA73006C5944 /* HasCancelableBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5891A0323FFEA73006C5944 /* HasCancelableBag.swift */; };
 		B5FA82A523FD507900EC355E /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = B5FA82A323FD507900EC355E /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,8 +62,6 @@
 		B56DEFD323FADC01004B5A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57F1BAF23FD5E04007C186C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B57F1BB323FD634E007C186C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B57F1BB423FD634E007C186C /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
-		B57F1BB523FD634E007C186C /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		B57F1BB923FD72D7007C186C /* DefaultNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationController.swift; sourceTree = "<group>"; };
 		B5891A0323FFEA73006C5944 /* HasCancelableBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCancelableBag.swift; sourceTree = "<group>"; };
 		B5FA82A123FD507900EC355E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,8 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				B57F1BB323FD634E007C186C /* ProfileViewController.swift */,
-				B57F1BB423FD634E007C186C /* ProfileModel.swift */,
-				B57F1BB523FD634E007C186C /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -316,13 +310,11 @@
 				B57F1BBA23FD72D7007C186C /* DefaultNavigationController.swift in Sources */,
 				B5891A0423FFEA73006C5944 /* HasCancelableBag.swift in Sources */,
 				B557D857240020F500F3A46D /* Redux.swift in Sources */,
-				B57F1BB723FD634E007C186C /* ProfileModel.swift in Sources */,
 				B56DEFC623FADBFB004B5A48 /* AppDelegate.swift in Sources */,
 				B54390B623FD58F7009AA57A /* Autolayout.swift in Sources */,
 				B52E3E6A23FEA240009A090E /* File.swift in Sources */,
 				B51F46D723FBE740005C854F /* DefaultViewController.swift in Sources */,
 				B56DEFC823FADBFB004B5A48 /* SceneDelegate.swift in Sources */,
-				B57F1BB823FD634E007C186C /* ProfileViewModel.swift in Sources */,
 				B5FA82B323FD513600EC355E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
