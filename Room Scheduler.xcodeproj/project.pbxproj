@@ -10,6 +10,7 @@
 		B51F46D723FBE740005C854F /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F46D623FBE740005C854F /* DefaultViewController.swift */; };
 		B52E3E6A23FEA240009A090E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E3E6923FEA240009A090E /* File.swift */; };
 		B54390B623FD58F7009AA57A /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54390B523FD58F7009AA57A /* Autolayout.swift */; };
+		B557D857240020F500F3A46D /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557D856240020F500F3A46D /* Redux.swift */; };
 		B56DEFC623FADBFB004B5A48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56DEFC523FADBFB004B5A48 /* AppDelegate.swift */; };
 		B56DEFC823FADBFB004B5A48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56DEFC723FADBFB004B5A48 /* SceneDelegate.swift */; };
 		B56DEFCF23FADC01004B5A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56DEFCE23FADC01004B5A48 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		B51F46D623FBE740005C854F /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		B52E3E6923FEA240009A090E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		B54390B523FD58F7009AA57A /* Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
+		B557D856240020F500F3A46D /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
 		B56DEFC223FADBFB004B5A48 /* Room Scheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Room Scheduler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56DEFC523FADBFB004B5A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B56DEFC723FADBFB004B5A48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		B557D8552400207000F3A46D /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				B557D856240020F500F3A46D /* Redux.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
 		B56DEFB923FADBFB004B5A48 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		B56DEFC423FADBFB004B5A48 /* Room Scheduler */ = {
 			isa = PBXGroup;
 			children = (
+				B557D8552400207000F3A46D /* Redux */,
 				B51F46D523FBE6ED005C854F /* Common */,
 				B5FA82B023FD50E200EC355E /* Flow */,
 				B56DEFC523FADBFB004B5A48 /* AppDelegate.swift */,
@@ -304,6 +315,7 @@
 				B57F1BB623FD634E007C186C /* ProfileViewController.swift in Sources */,
 				B57F1BBA23FD72D7007C186C /* DefaultNavigationController.swift in Sources */,
 				B5891A0423FFEA73006C5944 /* HasCancelableBag.swift in Sources */,
+				B557D857240020F500F3A46D /* Redux.swift in Sources */,
 				B57F1BB723FD634E007C186C /* ProfileModel.swift in Sources */,
 				B56DEFC623FADBFB004B5A48 /* AppDelegate.swift in Sources */,
 				B54390B623FD58F7009AA57A /* Autolayout.swift in Sources */,
