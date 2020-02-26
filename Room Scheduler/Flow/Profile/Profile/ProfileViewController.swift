@@ -23,11 +23,13 @@ final class ProfileViewController: DefaultViewController, HasCancelableBag {
     private let bioLabel = UILabel()
 
     private var store: Store<User, Never>
+    private var coordinator: ProfileFlowCoordinator
     
     private var bag = Set<AnyCancellable>()
     
-    init(_ store: Store<User, Never>) {
+    init(_ store: Store<User, Never>, coordinator: ProfileFlowCoordinator) {
         self.store = store
+        self.coordinator = coordinator
 
         super.init()
 
@@ -39,6 +41,11 @@ final class ProfileViewController: DefaultViewController, HasCancelableBag {
         store.$state.map { .some("\($0.firstName) \($0.lastName)") }.assign(to: \.title, on: self).store(in: &bag)
         store.$state.map { .some("Age: \($0.age)") }.assign(to: \.text, on: ageLabel).store(in: &bag)
         store.$state.map { .some($0.bio) }.assign(to: \.text, on: bioLabel).store(in: &bag)
+    }
+    
+    @objc
+    func showEdit() {
+        coordinator.provide(.editProfile)
     }
 }
 
@@ -57,7 +64,7 @@ private extension ProfileViewController  {
     }
     
     func setupNavigation() {
-        let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: nil)
+        let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(showEdit))
         navigationItem.rightBarButtonItem = editButton
     }
     

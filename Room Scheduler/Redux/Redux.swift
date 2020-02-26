@@ -26,7 +26,7 @@ func combine<Value, Action>(_ reducers: (inout Value, Action) -> Void...) -> (in
 
 final class Store<State, Action> {
     
-    @Published var state: State
+    @Published private(set) var state: State
     
     private let reducer: (inout State, Action) -> Void
     private var cancellable: Cancellable?

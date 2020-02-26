@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B509DD3E24068CE6003F05ED /* TypeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509DD3D24068CE6003F05ED /* TypeAction.swift */; };
+		B51023852406AE3F00BD8978 /* ProfileAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51023842406AE3F00BD8978 /* ProfileAction.swift */; };
 		B51F46D723FBE740005C854F /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F46D623FBE740005C854F /* DefaultViewController.swift */; };
-		B52E3E6A23FEA240009A090E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E3E6923FEA240009A090E /* File.swift */; };
 		B54390B623FD58F7009AA57A /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54390B523FD58F7009AA57A /* Autolayout.swift */; };
 		B557D857240020F500F3A46D /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557D856240020F500F3A46D /* Redux.swift */; };
 		B56DEFC623FADBFB004B5A48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56DEFC523FADBFB004B5A48 /* AppDelegate.swift */; };
@@ -19,6 +20,12 @@
 		B57F1BB623FD634E007C186C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F1BB323FD634E007C186C /* ProfileViewController.swift */; };
 		B57F1BBA23FD72D7007C186C /* DefaultNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F1BB923FD72D7007C186C /* DefaultNavigationController.swift */; };
 		B5891A0423FFEA73006C5944 /* HasCancelableBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5891A0323FFEA73006C5944 /* HasCancelableBag.swift */; };
+		B59A382D2406AD2700096EEC /* ProfileFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A382C2406AD2700096EEC /* ProfileFlowCoordinator.swift */; };
+		B5C81A9D2405C8D1008F82CB /* EditProfileAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C81A9C2405C8D1008F82CB /* EditProfileAction.swift */; };
+		B5C81A9F2405C9AC008F82CB /* EditProfileReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C81A9E2405C9AC008F82CB /* EditProfileReducer.swift */; };
+		B5C81AA12405CB2C008F82CB /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C81AA02405CB2C008F82CB /* EditProfileViewController.swift */; };
+		B5C81AA4240675DE008F82CB /* AgeStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C81AA3240675DE008F82CB /* AgeStepper.swift */; };
+		B5C81AA62406772A008F82CB /* AgeStepperAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C81AA52406772A008F82CB /* AgeStepperAction.swift */; };
 		B5FA82A523FD507900EC355E /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = B5FA82A323FD507900EC355E /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5FA82A823FD507900EC355E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA82A123FD507900EC355E /* Core.framework */; };
 		B5FA82A923FD507900EC355E /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA82A123FD507900EC355E /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -50,8 +57,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B509DD3D24068CE6003F05ED /* TypeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAction.swift; sourceTree = "<group>"; };
+		B51023842406AE3F00BD8978 /* ProfileAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAction.swift; sourceTree = "<group>"; };
 		B51F46D623FBE740005C854F /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
-		B52E3E6923FEA240009A090E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		B54390B523FD58F7009AA57A /* Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
 		B557D856240020F500F3A46D /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
 		B56DEFC223FADBFB004B5A48 /* Room Scheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Room Scheduler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +72,12 @@
 		B57F1BB323FD634E007C186C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B57F1BB923FD72D7007C186C /* DefaultNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationController.swift; sourceTree = "<group>"; };
 		B5891A0323FFEA73006C5944 /* HasCancelableBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCancelableBag.swift; sourceTree = "<group>"; };
+		B59A382C2406AD2700096EEC /* ProfileFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlowCoordinator.swift; sourceTree = "<group>"; };
+		B5C81A9C2405C8D1008F82CB /* EditProfileAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileAction.swift; sourceTree = "<group>"; };
+		B5C81A9E2405C9AC008F82CB /* EditProfileReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileReducer.swift; sourceTree = "<group>"; };
+		B5C81AA02405CB2C008F82CB /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		B5C81AA3240675DE008F82CB /* AgeStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeStepper.swift; sourceTree = "<group>"; };
+		B5C81AA52406772A008F82CB /* AgeStepperAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeStepperAction.swift; sourceTree = "<group>"; };
 		B5FA82A123FD507900EC355E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FA82A323FD507900EC355E /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		B5FA82A423FD507900EC355E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,8 +109,8 @@
 				B51F46D623FBE740005C854F /* DefaultViewController.swift */,
 				B54390B523FD58F7009AA57A /* Autolayout.swift */,
 				B57F1BB923FD72D7007C186C /* DefaultNavigationController.swift */,
-				B52E3E6923FEA240009A090E /* File.swift */,
 				B5891A0323FFEA73006C5944 /* HasCancelableBag.swift */,
+				B509DD3D24068CE6003F05ED /* TypeAction.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -153,7 +167,10 @@
 		B57F1BB123FD61E1007C186C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				B5C81A9B2405C7D6008F82CB /* EditProfile */,
 				B57F1BB223FD61F5007C186C /* Profile */,
+				B51023842406AE3F00BD8978 /* ProfileAction.swift */,
+				B59A382C2406AD2700096EEC /* ProfileFlowCoordinator.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -164,6 +181,26 @@
 				B57F1BB323FD634E007C186C /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		B5C81A9B2405C7D6008F82CB /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				B5C81AA2240673EE008F82CB /* AgeStepper */,
+				B5C81A9C2405C8D1008F82CB /* EditProfileAction.swift */,
+				B5C81A9E2405C9AC008F82CB /* EditProfileReducer.swift */,
+				B5C81AA02405CB2C008F82CB /* EditProfileViewController.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		B5C81AA2240673EE008F82CB /* AgeStepper */ = {
+			isa = PBXGroup;
+			children = (
+				B5C81AA3240675DE008F82CB /* AgeStepper.swift */,
+				B5C81AA52406772A008F82CB /* AgeStepperAction.swift */,
+			);
+			path = AgeStepper;
 			sourceTree = "<group>";
 		};
 		B5FA82A223FD507900EC355E /* Core */ = {
@@ -306,14 +343,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C81AA12405CB2C008F82CB /* EditProfileViewController.swift in Sources */,
+				B5C81A9F2405C9AC008F82CB /* EditProfileReducer.swift in Sources */,
+				B51023852406AE3F00BD8978 /* ProfileAction.swift in Sources */,
 				B57F1BB623FD634E007C186C /* ProfileViewController.swift in Sources */,
 				B57F1BBA23FD72D7007C186C /* DefaultNavigationController.swift in Sources */,
+				B59A382D2406AD2700096EEC /* ProfileFlowCoordinator.swift in Sources */,
 				B5891A0423FFEA73006C5944 /* HasCancelableBag.swift in Sources */,
+				B5C81AA4240675DE008F82CB /* AgeStepper.swift in Sources */,
 				B557D857240020F500F3A46D /* Redux.swift in Sources */,
 				B56DEFC623FADBFB004B5A48 /* AppDelegate.swift in Sources */,
+				B5C81AA62406772A008F82CB /* AgeStepperAction.swift in Sources */,
 				B54390B623FD58F7009AA57A /* Autolayout.swift in Sources */,
-				B52E3E6A23FEA240009A090E /* File.swift in Sources */,
 				B51F46D723FBE740005C854F /* DefaultViewController.swift in Sources */,
+				B509DD3E24068CE6003F05ED /* TypeAction.swift in Sources */,
+				B5C81A9D2405C8D1008F82CB /* EditProfileAction.swift in Sources */,
 				B56DEFC823FADBFB004B5A48 /* SceneDelegate.swift in Sources */,
 				B5FA82B323FD513600EC355E /* MainViewController.swift in Sources */,
 			);
