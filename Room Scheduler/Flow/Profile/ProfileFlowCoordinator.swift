@@ -26,7 +26,7 @@ final class ProfileFlowCoordinator {
     }
     
     private var profile: UIViewController {
-        ProfileViewController(store.substore(value: { $0 }, action: { _ in .profileAction }), coordinator: self)
+        ProfileViewController(store.substore(value: { $0 }, action: { _ in .profileAction }), coordinator: profileCoordinator(_:))
     }
     
     private var editProfile: UIViewController {
@@ -42,7 +42,7 @@ final class ProfileFlowCoordinator {
     }
     
     
-    func provide(_ action: ProfileFlowAction) {
+    private func profileCoordinator(_ action: ProfileFlowAction) {
         switch action {
         case .editProfile:
             navigation?.pushViewController(editProfile, animated: true)

@@ -23,11 +23,11 @@ final class ProfileViewController: DefaultViewController, HasCancelableBag {
     private let bioLabel = UILabel()
 
     private var store: Store<User, Never>
-    private var coordinator: ProfileFlowCoordinator
+    private var coordinator: (ProfileFlowAction) -> Void
     
     private var bag = Set<AnyCancellable>()
     
-    init(_ store: Store<User, Never>, coordinator: ProfileFlowCoordinator) {
+    init(_ store: Store<User, Never>, coordinator: @escaping (ProfileFlowAction) -> Void) {
         self.store = store
         self.coordinator = coordinator
 
@@ -45,7 +45,7 @@ final class ProfileViewController: DefaultViewController, HasCancelableBag {
     
     @objc
     func showEdit() {
-        coordinator.provide(.editProfile)
+        coordinator(.editProfile)
     }
 }
 

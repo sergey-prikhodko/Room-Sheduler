@@ -8,6 +8,7 @@
 
 import Foundation
 import Combine
+import UIKit
 
 func pullback<LValue, GValue, LAction, GAction> (
     _ reducer: @escaping (inout LValue, LAction) -> Void,
@@ -40,7 +41,7 @@ final class Store<State, Action> {
         reducer(&state, action)
     }
     
-    public func substore<LocalValue, LocalAction>(
+    func substore<LocalValue, LocalAction>(
         value toLocalValue: @escaping (State) -> LocalValue,
         action toGlobalAction: @escaping (LocalAction) -> Action
     ) -> Store<LocalValue, LocalAction> {

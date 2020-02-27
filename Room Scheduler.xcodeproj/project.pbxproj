@@ -10,6 +10,10 @@
 		B509DD3E24068CE6003F05ED /* TypeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509DD3D24068CE6003F05ED /* TypeAction.swift */; };
 		B51023852406AE3F00BD8978 /* ProfileAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51023842406AE3F00BD8978 /* ProfileAction.swift */; };
 		B51F46D723FBE740005C854F /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F46D623FBE740005C854F /* DefaultViewController.swift */; };
+		B5362657240807CD00ECA11C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5362656240807CD00ECA11C /* WelcomeViewController.swift */; };
+		B536265A24080A6900ECA11C /* UIControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536265924080A6900ECA11C /* UIControl+Combine.swift */; };
+		B536265C2408114900ECA11C /* WelcomeFlowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536265B2408114900ECA11C /* WelcomeFlowAction.swift */; };
+		B536265E2408160300ECA11C /* AuthorizationFlowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536265D2408160300ECA11C /* AuthorizationFlowProvider.swift */; };
 		B54390B623FD58F7009AA57A /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54390B523FD58F7009AA57A /* Autolayout.swift */; };
 		B557D857240020F500F3A46D /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557D856240020F500F3A46D /* Redux.swift */; };
 		B56DEFC623FADBFB004B5A48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56DEFC523FADBFB004B5A48 /* AppDelegate.swift */; };
@@ -60,6 +64,10 @@
 		B509DD3D24068CE6003F05ED /* TypeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAction.swift; sourceTree = "<group>"; };
 		B51023842406AE3F00BD8978 /* ProfileAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAction.swift; sourceTree = "<group>"; };
 		B51F46D623FBE740005C854F /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
+		B5362656240807CD00ECA11C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		B536265924080A6900ECA11C /* UIControl+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Combine.swift"; sourceTree = "<group>"; };
+		B536265B2408114900ECA11C /* WelcomeFlowAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeFlowAction.swift; sourceTree = "<group>"; };
+		B536265D2408160300ECA11C /* AuthorizationFlowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationFlowProvider.swift; sourceTree = "<group>"; };
 		B54390B523FD58F7009AA57A /* Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
 		B557D856240020F500F3A46D /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
 		B56DEFC223FADBFB004B5A48 /* Room Scheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Room Scheduler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,8 +119,27 @@
 				B57F1BB923FD72D7007C186C /* DefaultNavigationController.swift */,
 				B5891A0323FFEA73006C5944 /* HasCancelableBag.swift */,
 				B509DD3D24068CE6003F05ED /* TypeAction.swift */,
+				B536265924080A6900ECA11C /* UIControl+Combine.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		B5362654240806DC00ECA11C /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				B53626552408075500ECA11C /* Welcome */,
+				B536265D2408160300ECA11C /* AuthorizationFlowProvider.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		B53626552408075500ECA11C /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				B5362656240807CD00ECA11C /* WelcomeViewController.swift */,
+				B536265B2408114900ECA11C /* WelcomeFlowAction.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		B557D8552400207000F3A46D /* Redux */ = {
@@ -216,6 +243,7 @@
 		B5FA82B023FD50E200EC355E /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				B5362654240806DC00ECA11C /* Authorization */,
 				B57F1BB123FD61E1007C186C /* Profile */,
 				B5FA82B123FD50E900EC355E /* Main */,
 			);
@@ -347,11 +375,15 @@
 				B5C81A9F2405C9AC008F82CB /* EditProfileReducer.swift in Sources */,
 				B51023852406AE3F00BD8978 /* ProfileAction.swift in Sources */,
 				B57F1BB623FD634E007C186C /* ProfileViewController.swift in Sources */,
+				B536265A24080A6900ECA11C /* UIControl+Combine.swift in Sources */,
 				B57F1BBA23FD72D7007C186C /* DefaultNavigationController.swift in Sources */,
 				B59A382D2406AD2700096EEC /* ProfileFlowCoordinator.swift in Sources */,
 				B5891A0423FFEA73006C5944 /* HasCancelableBag.swift in Sources */,
+				B536265C2408114900ECA11C /* WelcomeFlowAction.swift in Sources */,
 				B5C81AA4240675DE008F82CB /* AgeStepper.swift in Sources */,
 				B557D857240020F500F3A46D /* Redux.swift in Sources */,
+				B536265E2408160300ECA11C /* AuthorizationFlowProvider.swift in Sources */,
+				B5362657240807CD00ECA11C /* WelcomeViewController.swift in Sources */,
 				B56DEFC623FADBFB004B5A48 /* AppDelegate.swift in Sources */,
 				B5C81AA62406772A008F82CB /* AgeStepperAction.swift in Sources */,
 				B54390B623FD58F7009AA57A /* Autolayout.swift in Sources */,

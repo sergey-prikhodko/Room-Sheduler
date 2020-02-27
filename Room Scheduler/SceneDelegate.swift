@@ -22,14 +22,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let store = Store<User, ProfileAction>(User.empty, reducer: profileReducer)
-        let flow = ProfileFlowCoordinator(store)
-        
+//        let store = Store<User, ProfileAction>(User.empty, reducer: profileReducer)
+        let flow = AuthorizationFlowProvider()
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = flow.createFlow()
         window.makeKeyAndVisible()
         
-        a = store.$state.sink { print($0) }
+//        a = store.$state.sink { print($0) }
         
         self.window = window
         
